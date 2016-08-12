@@ -1,0 +1,15 @@
+﻿[sheet]
+1,,
+[table]
+[sql]
+	select*
+  from t_wf_casetable ORDER BY WFID,CASETABLEID
+[endsql]
+[write]
+B3,wfid;
+C3,casetableid;
+D3,sqlcontent;
+[endwrite]
+[endtable]
+[endsheet]
+

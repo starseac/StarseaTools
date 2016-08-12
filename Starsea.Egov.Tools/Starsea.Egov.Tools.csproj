@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40E9B247-4B91-4299-832B-92DB3700357D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Starsea.Egov.Tools</RootNamespace>
+    <AssemblyName>Starse.Egov.Tools</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BSI.EnterpriseLibrary, Version=1.2.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\QJEGOV3DEV\bin\BSI.EnterpriseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DB_CHECK_OBJECT_EXPORT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB_CHECK_OBJECT_EXPORT.Designer.cs">
+      <DependentUpon>DB_CHECK_OBJECT_EXPORT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EGOV_CHECK_DEL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EGOV_CHECK_DEL.Designer.cs">
+      <DependentUpon>EGOV_CHECK_DEL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EGOV_CHECK_PAGE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EGOV_CHECK_PAGE.Designer.cs">
+      <DependentUpon>EGOV_CHECK_PAGE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EGOV_CHECK_SJJC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EGOV_CHECK_SJJC.Designer.cs">
+      <DependentUpon>EGOV_CHECK_SJJC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EGOV_CHECK_SJJH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EGOV_CHECK_SJJH.Designer.cs">
+      <DependentUpon>EGOV_CHECK_SJJH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EGOV_CHECK_FJS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EGOV_CHECK_FJS.Designer.cs">
+      <DependentUpon>EGOV_CHECK_FJS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB_CHECK_MDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB_CHECK_MDB.Designer.cs">
+      <DependentUpon>DB_CHECK_MDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB_CHECK_ORACLE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DB_CHECK_ORACLE.Designer.cs">
+      <DependentUpon>DB_CHECK_ORACLE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EGOV_FJ_FILES.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EGOV_FJ_FILES.Designer.cs">
+      <DependentUpon>EGOV_FJ_FILES.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Starsea.Egov.Tools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Starsea.Egov.Tools.Designer.cs">
+      <DependentUpon>Starsea.Egov.Tools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Starsea.Egov.Tools1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Starsea.Egov.Tools.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateLogInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateLogInfo.Designer.cs">
+      <DependentUpon>UpdateLogInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DB_CHECK_OBJECT_EXPORT.resx">
+      <DependentUpon>DB_CHECK_OBJECT_EXPORT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DB_CHECK_ORACLE.resx">
+      <DependentUpon>DB_CHECK_ORACLE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EGOV_CHECK_DEL.resx">
+      <DependentUpon>EGOV_CHECK_DEL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EGOV_CHECK_PAGE.resx">
+      <DependentUpon>EGOV_CHECK_PAGE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EGOV_CHECK_SJJC.resx">
+      <DependentUpon>EGOV_CHECK_SJJC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EGOV_CHECK_SJJH.resx">
+      <DependentUpon>EGOV_CHECK_SJJH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EGOV_CHECK_FJS.resx">
+      <DependentUpon>EGOV_CHECK_FJS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DB_CHECK_MDB.resx">
+      <DependentUpon>DB_CHECK_MDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EGOV_FJ_FILES.resx">
+      <DependentUpon>EGOV_FJ_FILES.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Starsea.Egov.Tools.resx">
+      <DependentUpon>Starsea.Egov.Tools.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Starsea.Egov.Tools1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateLogInfo.resx">
+      <DependentUpon>UpdateLogInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Starsea.Database.Oracle\Starsea.Database.Oracle.csproj">
+      <Project>{57add9de-1c38-4f62-8d78-81135b79d24a}</Project>
+      <Name>Starsea.Database.Oracle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Starsea.fjs\Starsea.Egov.csproj">
+      <Project>{b0fb7980-662c-415c-ad26-6fc601ca6418}</Project>
+      <Name>Starsea.Egov</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Starsea.office.npoi\Starsea.office.npoi.csproj">
+      <Project>{8043685d-7a83-404a-92a9-4f2275cb70f8}</Project>
+      <Name>Starsea.office.npoi</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Starsea.Database.Access\Starsea.Database.Access.csproj">
+      <Project>{87801baf-a748-42b5-b6ae-aced7815ba35}</Project>
+      <Name>Starsea.Database.Access</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CheckConfig\" />
+    <Folder Include="Report\" />
+    <Folder Include="TempFile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UpdateLog.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0FB7980-662C-415C-AD26-6FC601CA6418}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Starsea.Egov</RootNamespace>
+    <AssemblyName>Starsea.Egov</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BSI.EnterpriseLibrary, Version=1.2.1.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\WebTest\bin\BSI.EnterpriseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="db\check.cs" />
+    <Compile Include="db\dbdata.cs" />
+    <Compile Include="filespackage\createpkg.cs" />
+    <Compile Include="fjs\check.cs" />
+    <Compile Include="console.cs" />
+    <Compile Include="fjs\ctmenu.cs" />
+    <Compile Include="fjs\export.cs" />
+    <Compile Include="fjs\pretvnode.cs" />
+    <Compile Include="fjs\tvclass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="fjs\tvnode.cs" />
+    <Compile Include="fjs\update.cs" />
+    <Compile Include="scpz\check.cs" />
+    <Compile Include="scpz\export.cs" />
+    <Compile Include="scpz\update.cs" />
+    <Compile Include="sjjc\check.cs" />
+    <Compile Include="sjjc\export.cs" />
+    <Compile Include="sjjc\update.cs" />
+    <Compile Include="sjsjjh\check.cs" />
+    <Compile Include="sjsjjh\export.cs" />
+    <Compile Include="sjsjjh\update.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Starsea.Database.Access\Starsea.Database.Access.csproj">
+      <Project>{87801baf-a748-42b5-b6ae-aced7815ba35}</Project>
+      <Name>Starsea.Database.Access</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,32 @@
+﻿[sheet]
+1,,
+[table]
+[sql]
+	SELECT tvnodeid,
+       tvnodename,
+       tvnodeurl,
+       contextmenuid,
+       eventtype,
+       prenodeid,
+       tvnodetypeid,
+       tvnodeindex,
+       annexno,
+       uptvnodeid
+  FROM T_CASECONTENT_NODES t
+ order by tvnodetypeid,prenodeid,tvnodeindex
+[endsql]
+[write]
+B3,tvnodeid;
+C3,tvnodename;
+D3,tvnodeurl;
+E3,contextmenuid;
+F3,eventtype;
+G3,prenodeid;
+H3,tvnodetypeid;
+I3,tvnodeindex;
+J3,annexno;
+K3,uptvnodeid;
+[endwrite]
+[endtable]
+[endsheet]
+

@@ -1,0 +1,30 @@
+﻿[sheet]
+1,,
+[table]
+[sql]
+	select wfid,
+       infoid,
+       sqlcontent,
+       operatefield,
+       operatetable,
+       fcaseidname,
+       outputtype,
+       sqlparameters,
+       excenoquerysql
+  from t_bj_uploadinfos
+ where outputtype = ':outputtype'
+[endsql]
+[write]
+B3,wfid;
+C3,infoid;
+D3,sqlcontent;
+E3,operatefield;
+F3,operatetable;
+G3,fcaseidname;
+H3,outputtype;
+I3,sqlparameters;
+J3,excenoquerysql;
+[endwrite]
+[endtable]
+[endsheet]
+
