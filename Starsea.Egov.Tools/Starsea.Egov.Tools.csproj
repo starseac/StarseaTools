@@ -138,6 +138,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Starsea.Egov.Tools.resx</DependentUpon>
     </Compile>
+    <Compile Include="TOOLS_AdobePdfPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TOOLS_AdobePdfPrint.Designer.cs">
+      <DependentUpon>TOOLS_AdobePdfPrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateLogInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,6 +195,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Starsea.Egov.Tools1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="TOOLS_AdobePdfPrint.resx">
+      <DependentUpon>TOOLS_AdobePdfPrint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateLogInfo.resx">
       <DependentUpon>UpdateLogInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +215,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Starsea.AdobePdfPrint\Starsea.AdobePdfPrint.csproj">
+      <Project>{53201EB2-E42D-45F1-9B10-470249BADA9C}</Project>
+      <Name>Starsea.AdobePdfPrint</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Starsea.Database.Oracle\Starsea.Database.Oracle.csproj">
       <Project>{57add9de-1c38-4f62-8d78-81135b79d24a}</Project>
       <Name>Starsea.Database.Oracle</Name>

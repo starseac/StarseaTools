@@ -77,5 +77,11 @@ namespace Starsea.Egov.Tools
             
 
         }
+
+        private void btn_pdfprint_Click(object sender, EventArgs e)
+        {
+            TOOLS_AdobePdfPrint pdfprint = new TOOLS_AdobePdfPrint();
+            pdfprint.Show();
+        }
     }
 }
