@@ -1,0 +1,402 @@
+﻿[sheet]
+1,,
+[table]
+[sql]
+	select A.CASEID,
+       A.STARTDATE 流程开始时间,
+       (select personname from t_base_user where userid = c.userid) 签收人,
+       b.landstand 坐落,
+       b.userightarea 使用权面积,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '地类代码'
+           and code = b.landuse) 土地用途,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '土地使用权类型'
+           and code = b.lisensetype) 土地使用权类型,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '权属性质'
+           and code = b.propertynature) 权属性质,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '权利设立情况'
+           and code = b.rightsetupsituation) 权利设立情况,
+       d. buildfar 容积率,
+       d. buildthickness 建筑密度,
+       d. buildhighlimit 建筑限高,
+       d. useterm 使用期限,
+       d. useendterm 终止日期,
+       d.alonearea 独用面积,
+       d.apportionarea 分摊面积,
+       d.landuser 使用权人,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '证件类型'
+           and code = d.papertype) 证件类型,
+       d.papercode 证件编码,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '使用者性质'
+           and code = d.usernature) 单位性质,
+       d.postcode 邮政编码,
+       b.legalpersonname 法定代表人,
+       b.tel 法人联系电话,
+       b.agentname 代理人,
+       b.proqualificertificateid 代理人职业资格证书号,
+       b.agenciesname 代理机构名称,
+       b.agenttel 代理人联系电话,
+      
+       
+       d.propertyprove 权属来源证明,
+       b.appregcontents 申请登记内容,
+       e.opinioncontents 经办意见,
+       e.opinionpeople 经办人,
+       e.opiniondate 经办日期,
+       f.opinion 意见1,
+       f.personname 意见人1,
+       f.dodate 意见日期1,
+       g.opinion 意见2,
+       g.personname 意见人2,
+       g.dodate 意见日期2,
+        h.opinion 意见3,
+       h.personname 意见人3,
+       h.dodate 意见日期3
+
+  from T_WF_WFPROJECT A
+  LEFT JOIN APPLICATION B
+    ON A.caseid = B.caseno
+  left join t_Wf_Rules_Personmerge c
+    on a.caseid = c.caseid
+   and c.runid = 1
+  left join approve d
+    on a.caseid = d.caseno
+  left join opinion e
+    on a.caseid = e.caseno
+   and e.opiniontype = 120
+  left join t_pj_opinion f
+    on a.caseid = f.caseid
+   and f.yjlx = 'BGDJSJ'
+  left join t_pj_opinion g
+    on a.caseid = f.caseid
+   and f.yjlx = 'BGDJSJ'
+  left join t_pj_opinion h
+    on a.caseid = f.caseid
+   and f.yjlx = 'BGDJSJ'
+
+
+[endsql]
+[write]
+A3,CASEID;
+D3,流程开始时间;
+E3,签收人;
+03,坐落;
+Q3,使用权面积;
+S3,土地用途;
+U3,土地使用权类型;
+V3,权属性质;
+W3,权利设立情况;
+
+X3,容积率;
+Y3,建筑密度;
+Z3,建筑限高;
+
+AK3,终止日期;
+AL3,使用期限;
+AM3,使用权面积;
+AN3,独用面积;
+AO3,分摊面积;
+
+BI3,使用权人;
+BJ3,证件类型;
+BK3,证件编码;
+BL3,单位性质;
+BN3,邮政编码;
+BO3,法定代表人;
+BP3,法人联系电话;
+BQ3,代理人;
+BR3,代理人职业资格证书号;
+BS3,代理机构名称;
+BT3,代理人联系电话;
+
+CN3,权属来源证明;
+CO3,申请登记内容;
+
+DQ3,意见人1;
+DS3,意见1;
+DT3,意见日期1;
+
+DU3,意见人2;
+DW3,意见2;
+DX3,意见日期2;
+
+DY3,意见人3;
+EA3,意见3;
+EB3,意见日期3;
+
+[endwrite]
+[endtable]
+[endsheet]
+
+[sheet]
+2,,
+[table]
+[sql]
+	select A.CASEID,
+       A.STARTDATE 流程开始时间,
+       (select personname from t_base_user where userid = c.userid) 签收人,
+       b.landstand 坐落,
+       b.userightarea 使用权面积,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '地类代码'
+           and code = b.landuse) 土地用途,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '土地使用权类型'
+           and code = b.lisensetype) 土地使用权类型,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '权属性质'
+           and code = b.propertynature) 权属性质,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '权利设立情况'
+           and code = b.rightsetupsituation) 权利设立情况,
+       d. buildfar 容积率,
+       d. buildthickness 建筑密度,
+       d. buildhighlimit 建筑限高,
+       d. useterm 使用期限,
+       d. useendterm 终止日期,
+       d.alonearea 独用面积,
+       d.apportionarea 分摊面积,
+       d.landuser 使用权人,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '证件类型'
+           and code = d.papertype) 证件类型,
+       d.papercode 证件编码,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '使用者性质'
+           and code = d.usernature) 单位性质,
+       d.postcode 邮政编码,
+       b.legalpersonname 法定代表人,
+       b.tel 法人联系电话,
+       b.agentname 代理人,
+       b.proqualificertificateid 代理人职业资格证书号,
+       b.agenciesname 代理机构名称,
+       b.agenttel 代理人联系电话,
+      
+       
+       d.propertyprove 权属来源证明,
+       b.appregcontents 申请登记内容,
+       e.opinioncontents 经办意见,
+       e.opinionpeople 经办人,
+       e.opiniondate 经办日期,
+       f.opinion 意见1,
+       f.personname 意见人1,
+       f.dodate 意见日期1,
+       g.opinion 意见2,
+       g.personname 意见人2,
+       g.dodate 意见日期2,
+        h.opinion 意见3,
+       h.personname 意见人3,
+       h.dodate 意见日期3
+
+  from T_WF_WFPROJECT A
+  LEFT JOIN APPLICATION B
+    ON A.caseid = B.caseno
+  left join t_Wf_Rules_Personmerge c
+    on a.caseid = c.caseid
+   and c.runid = 1
+  left join approve d
+    on a.caseid = d.caseno
+  left join opinion e
+    on a.caseid = e.caseno
+   and e.opiniontype = 120
+  left join t_pj_opinion f
+    on a.caseid = f.caseid
+   and f.yjlx = 'BGDJSJ'
+  left join t_pj_opinion g
+    on a.caseid = f.caseid
+   and f.yjlx = 'BGDJSJ'
+  left join t_pj_opinion h
+    on a.caseid = f.caseid
+   and f.yjlx = 'BGDJSJ'
+
+
+[endsql]
+[write]
+A3,CASEID;
+D3,流程开始时间;
+E3,签收人;
+O3,坐落;
+Q3,使用权面积;
+S3,土地用途;
+U3,土地使用权类型;
+V3,权属性质;
+W3,权利设立情况;
+
+X3,容积率;
+Y3,建筑密度;
+Z3,建筑限高;
+
+AK3,终止日期;
+AL3,使用期限;
+AM3,使用权面积;
+AN3,独用面积;
+AO3,分摊面积;
+
+BI3,使用权人;
+BJ3,证件类型;
+BK3,证件编码;
+BL3,单位性质;
+BN3,邮政编码;
+BO3,法定代表人;
+BP3,法人联系电话;
+BQ3,代理人;
+BR3,代理人职业资格证书号;
+BS3,代理机构名称;
+BT3,代理人联系电话;
+
+CN3,权属来源证明;
+CO3,申请登记内容;
+
+DQ3,意见人1;
+DS3,意见1;
+DT3,意见日期1;
+
+DU3,意见人2;
+DW3,意见2;
+DX3,意见日期2;
+
+DY3,意见人3;
+EA3,意见3;
+EB3,意见日期3;
+
+[endwrite]
+[endtable]
+[endsheet]
+
+
+
+[sheet]
+3,,
+[table]
+[sql]
+	select A.CASEID,
+       A.STARTDATE 流程开始时间,
+       (select personname from t_base_user where userid = c.userid) 签收人,
+       b.landstand 坐落,
+       b.userightarea 使用权面积,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '地类代码'
+           and code = b.landuse) 土地用途,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '土地使用权类型'
+           and code = b.lisensetype) 土地使用权类型,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '权属性质'
+           and code = b.propertynature) 权属性质,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '权利设立情况'
+           and code = b.rightsetupsituation) 权利设立情况,
+       d. buildfar 容积率,
+       d. buildthickness 建筑密度,
+       d. buildhighlimit 建筑限高,
+       d. useterm 使用期限,
+       d. useendterm 终止日期,
+       d.alonearea 独用面积,
+       d.apportionarea 分摊面积,
+       d.landuser 使用权人,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '证件类型'
+           and code = d.papertype) 证件类型,
+       d.papercode 证件编码,
+       (select CodeName
+          from CODETBL
+         WHERE CodeType = '使用者性质'
+           and code = d.usernature) 单位性质,
+       d.postcode 邮政编码,
+       b.legalpersonname 法定代表人,
+       b.tel 法人联系电话,
+       b.agentname 代理人,
+       b.proqualificertificateid 代理人职业资格证书号,
+       b.agenciesname 代理机构名称,
+       b.agenttel 代理人联系电话,
+      
+       
+       d.propertyprove 权属来源证明,
+       b.appregcontents 申请登记内容,
+       e.opinioncontents 经办意见,
+       e.opinionpeople 经办人,
+       e.opiniondate 经办日期,
+       f.opinion 意见1,
+       f.personname 意见人1,
+       f.dodate 意见日期1,
+       g.opinion 意见2,
+       g.personname 意见人2,
+       g.dodate 意见日期2,
+        h.opinion 意见3,
+       h.personname 意见人3,
+       h.dodate 意见日期3
+
+  from T_WF_WFPROJECT A
+  LEFT JOIN APPLICATION B
+    ON A.caseid = B.caseno
+  left join t_Wf_Rules_Personmerge c
+    on a.caseid = c.caseid
+   and c.runid = 1
+  left join approve d
+    on a.caseid = d.caseno
+  left join opinion e
+    on a.caseid = e.caseno
+   and e.opiniontype = 120
+  left join t_pj_opinion f
+    on a.caseid = f.caseid
+   and f.yjlx = 'BGDJSJ'
+  left join t_pj_opinion g
+    on a.caseid = f.caseid
+   and f.yjlx = 'BGDJSJ'
+  left join t_pj_opinion h
+    on a.caseid = f.caseid
+   and f.yjlx = 'BGDJSJ'
+
+
+[endsql]
+[write]
+A3,CASEID;
+D3,流程开始时间;
+E3,签收人;
+
+
+AF3,代理人;
+AG3,代理人职业资格证书号;
+AH3,代理机构名称;
+BI3,代理人联系电话;
+
+BC3,权属来源证明;
+BD3,申请登记内容;
+
+CF3,意见人1;
+CH3,意见1;
+CI3,意见日期1;
+
+CJ3,意见人2;
+CL3,意见2;
+CM3,意见日期2;
+
+CN3,意见人3;
+CP3,意见3;
+CQ3,意见日期3;
+[endwrite]
+[endtable]
+[endsheet]
+

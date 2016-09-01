@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FEAC47AA-E8C9-4AC2-8155-9EF21939F957}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>egovtools</RootNamespace>
+    <AssemblyName>egovtools</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>images\egovtools.ico</ApplicationIcon>
+    <StartupObject>
+    </StartupObject>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="database\DBConnection.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="forms\bsfmtools\BsfmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\bsfmtools\BsfmUpdate.Designer.cs">
+      <DependentUpon>BsfmUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\bsfmtools\GWSPYPLSZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\bsfmtools\GWSPYPLSZ.Designer.cs">
+      <DependentUpon>GWSPYPLSZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\roleUser\PartManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\roleUser\PartManage.Designer.cs">
+      <DependentUpon>PartManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\roleUser\RoleManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\roleUser\RoleManage.Designer.cs">
+      <DependentUpon>RoleManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\roleUser\UserManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\roleUser\UserManage.Designer.cs">
+      <DependentUpon>UserManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\sqlCreate\AddFunction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\sqlCreate\AddFunction.Designer.cs">
+      <DependentUpon>AddFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\sqlCreate\workflowDataClean.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\sqlCreate\workflowDataClean.Designer.cs">
+      <DependentUpon>workflowDataClean.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\bsfmtools\ExcelStyleEmpty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\bsfmtools\ExcelStyleEmpty.designer.cs">
+      <DependentUpon>ExcelStyleEmpty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\sqlCreate\Grant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\sqlCreate\Grant.designer.cs">
+      <DependentUpon>Grant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\sqlCreate\SetDesktop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\sqlCreate\SetDesktop.designer.cs">
+      <DependentUpon>SetDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\bsfmtools\BsfmUpdate.resx">
+      <DependentUpon>BsfmUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\bsfmtools\GWSPYPLSZ.resx">
+      <DependentUpon>GWSPYPLSZ.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\roleUser\PartManage.resx">
+      <DependentUpon>PartManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\roleUser\RoleManage.resx">
+      <DependentUpon>RoleManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\roleUser\UserManage.resx">
+      <DependentUpon>UserManage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\sqlCreate\AddFunction.resx">
+      <DependentUpon>AddFunction.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\sqlCreate\workflowDataClean.resx">
+      <DependentUpon>workflowDataClean.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\bsfmtools\ExcelStyleEmpty.resx">
+      <DependentUpon>ExcelStyleEmpty.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\sqlCreate\Grant.resx">
+      <DependentUpon>Grant.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\sqlCreate\SetDesktop.resx">
+      <DependentUpon>SetDesktop.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="T_BASE_DEPARTMENT.xsc">
+      <DependentUpon>T_BASE_DEPARTMENT.xsd</DependentUpon>
+    </None>
+    <None Include="T_BASE_DEPARTMENT.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>T_BASE_DEPARTMENT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="T_BASE_DEPARTMENT.xss">
+      <DependentUpon>T_BASE_DEPARTMENT.xsd</DependentUpon>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="T_BASE_DEPARTMENT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>T_BASE_DEPARTMENT.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="workflowClean.xml" />
+    <Content Include="images\user.gif" />
+    <Content Include="images\egovtools.ico" />
+    <Content Include="images\title.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="forms\function\" />
+    <Folder Include="function\" />
+    <Folder Include="help\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
