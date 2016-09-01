@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starsea.PDF_HB", "Starsea.P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starsea.RegularExpressions", "Starsea.RegularExpressions\Starsea.RegularExpressions.csproj", "{B2D886FE-3D4E-4C71-8C8F-609E8E61A310}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Starsea.NPOI.word", "Starsea.NPOI.word\Starsea.NPOI.word.csproj", "{9237AC93-B460-4F54-A2BF-71E3D3B236E4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -143,6 +145,16 @@ Global
 		{B2D886FE-3D4E-4C71-8C8F-609E8E61A310}.Release|Mixed Platforms.Build.0 = Release|x86
 		{B2D886FE-3D4E-4C71-8C8F-609E8E61A310}.Release|x86.ActiveCfg = Release|x86
 		{B2D886FE-3D4E-4C71-8C8F-609E8E61A310}.Release|x86.Build.0 = Release|x86
+		{9237AC93-B460-4F54-A2BF-71E3D3B236E4}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{9237AC93-B460-4F54-A2BF-71E3D3B236E4}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{9237AC93-B460-4F54-A2BF-71E3D3B236E4}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{9237AC93-B460-4F54-A2BF-71E3D3B236E4}.Debug|x86.ActiveCfg = Debug|x86
+		{9237AC93-B460-4F54-A2BF-71E3D3B236E4}.Debug|x86.Build.0 = Debug|x86
+		{9237AC93-B460-4F54-A2BF-71E3D3B236E4}.Release|Any CPU.ActiveCfg = Release|x86
+		{9237AC93-B460-4F54-A2BF-71E3D3B236E4}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{9237AC93-B460-4F54-A2BF-71E3D3B236E4}.Release|Mixed Platforms.Build.0 = Release|x86
+		{9237AC93-B460-4F54-A2BF-71E3D3B236E4}.Release|x86.ActiveCfg = Release|x86
+		{9237AC93-B460-4F54-A2BF-71E3D3B236E4}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
